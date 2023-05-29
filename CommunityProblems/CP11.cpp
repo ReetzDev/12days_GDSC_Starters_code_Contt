@@ -11,31 +11,28 @@ int main() {
 	while(T--)
 	{
 	    cin>>a>>b>>c>>d; //nitin a coins .. sobha b coins .. c to nw .. then d to nw
-	    if(a>b)
+	    if(a>=b)
 	    {
 	        b=b+c;
-	        if(a>b)
-	        {
-	            b=b+d;
-	        }
-	        else
-	        {
-	            a=a+d;
-	        }
 	    }
-	    else if(b>a)
+	    else //(b>a)
 	    {
 	        a=a+c;
-	        if(a>b)
-	        {
-	            b=b+d;
-	        }
-	        else
-	        {
-	            a=a+d;
-	        }
+	        
 	    }
-	    if(a>b)
+	    
+	    
+	    if(a>=b)
+	    {
+	        b=b+d;
+	    }
+	    else //(b>a)
+	    {
+	        a=a+d;
+	    }
+	    
+	    
+	    if(a>=b)
 	    {
 	        cout<<"N"<<endl;
 	    }
@@ -43,10 +40,7 @@ int main() {
 	    {
 	        cout<<"S"<<endl;
 	    }
-	    else if(a==b)
-	    {
-	        cout<<"N"<<endl;
-	    }
+	    
 	}
 	return 0;
 }
